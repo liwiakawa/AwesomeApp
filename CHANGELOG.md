@@ -1,5 +1,18 @@
 # Change log
 
+## V. 0.1.1 - May 21. 2020
+
+**Added**
+-  Added Account Screen
+-  Custom Account Screen
+-  Added FirstUser.png
+-  Added SecondUser.png
+-  Added ThirdUser.png
+
+**Changed**
+-  Constans colors
+-  Added new component to NavBar
+
 ## V. 0.1.0 - May 20. 2020
 
 **Added**

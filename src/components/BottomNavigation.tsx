@@ -7,6 +7,7 @@ import {
 
 import Home from "../screens/Home";
 import TodoList from "../screens/TodoList";
+import Account from"../screens/Account";
 import Colors from "../constans/Colors";
 
 const Tab = createBottomTabNavigator();
@@ -42,6 +43,15 @@ const BottomTabs: FC = () => {
         options={{
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="leaf" color={color} size={size} />
+          ),
+        }}
+      />
+            <Tab.Screen
+        name="Account"
+        component={Account}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="account" color={color} size={size} />
           ),
         }}
       />
