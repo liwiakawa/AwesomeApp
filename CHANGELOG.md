@@ -1,5 +1,20 @@
 # Change log
 
+## V. 0.1.3 - May 23. 2020
+
+**Added**
+-  Added Task Interface
+
+
+## V. 0.1.2 - May 22. 2020
+
+**Deleted**
+-  Deleted examples of actions and reducers
+
+**Added**
+-  Added Form.tsx
+-  Added TodoList.tsx
+
 ## V. 0.1.1 - May 21. 2020
 
 **Added**

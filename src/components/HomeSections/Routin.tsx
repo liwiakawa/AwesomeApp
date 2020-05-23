@@ -4,9 +4,9 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { Octicons, MaterialIcons } from "react-native-vector-icons";
+import { MaterialIcons } from "react-native-vector-icons";
 
-import Colors from "../../../constans/Colors";
+import Colors from "../../constans/Colors";
 
 const Container = styled.View``;
 
@@ -97,11 +97,11 @@ const BoxTxt = styled.Text`
   overflow: hidden;
 `;
 
-const Tonic: FC = () => {
+const Routin: FC = () => {
   return (
     <Container>
       <SectionTitleContainer>
-        <SectionTitle>Tonizowanie</SectionTitle>
+        <SectionTitle>Rutyna</SectionTitle>
       </SectionTitleContainer>
       <SectionContainer
         horizontal={true}
@@ -110,7 +110,7 @@ const Tonic: FC = () => {
       >
         <LeftArrowContainer />
         <Box>
-          <CustomImage source={require("../../../assets/4.png")} />
+          <CustomImage source={require("../../assets/13.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>
@@ -125,7 +125,7 @@ const Tonic: FC = () => {
           <LeftArrow name="keyboard-arrow-left" />
         </LeftArrowContainer>
         <Box>
-          <CustomImage source={require("../../../assets/5.png")} />
+          <CustomImage source={require("../../assets/14.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>
@@ -140,7 +140,7 @@ const Tonic: FC = () => {
           <LeftArrow name="keyboard-arrow-left" />
         </LeftArrowContainer>
         <Box>
-          <CustomImage source={require("../../../assets/6.png")} />
+          <CustomImage source={require("../../assets/15.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>
@@ -154,4 +154,4 @@ const Tonic: FC = () => {
   );
 };
 
-export default Tonic;
+export default Routin;

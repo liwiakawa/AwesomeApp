@@ -4,9 +4,9 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { MaterialIcons } from "react-native-vector-icons";
+import { Octicons, MaterialIcons } from "react-native-vector-icons";
 
-import Colors from "../../../constans/Colors";
+import Colors from "../../constans/Colors";
 
 const Container = styled.View``;
 
@@ -97,11 +97,11 @@ const BoxTxt = styled.Text`
   overflow: hidden;
 `;
 
-const Routin: FC = () => {
+const Tonic: FC = () => {
   return (
     <Container>
       <SectionTitleContainer>
-        <SectionTitle>Rutyna</SectionTitle>
+        <SectionTitle>Tonizowanie</SectionTitle>
       </SectionTitleContainer>
       <SectionContainer
         horizontal={true}
@@ -110,7 +110,7 @@ const Routin: FC = () => {
       >
         <LeftArrowContainer />
         <Box>
-          <CustomImage source={require("../../../assets/13.png")} />
+          <CustomImage source={require("../../assets/4.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>
@@ -125,7 +125,7 @@ const Routin: FC = () => {
           <LeftArrow name="keyboard-arrow-left" />
         </LeftArrowContainer>
         <Box>
-          <CustomImage source={require("../../../assets/14.png")} />
+          <CustomImage source={require("../../assets/5.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>
@@ -140,7 +140,7 @@ const Routin: FC = () => {
           <LeftArrow name="keyboard-arrow-left" />
         </LeftArrowContainer>
         <Box>
-          <CustomImage source={require("../../../assets/15.png")} />
+          <CustomImage source={require("../../assets/6.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>
@@ -154,4 +154,4 @@ const Routin: FC = () => {
   );
 };
 
-export default Routin;
+export default Tonic;

@@ -7,13 +7,13 @@ import {
 import { Octicons } from "react-native-vector-icons";
 
 import Colors from "../../constans/Colors";
-import Clean from "../Home/Sections/Clean";
-import Tonic from "../Home/Sections/Tonic";
-import Care from "../Home/Sections/Care";
-import Materials from "../Home/Sections/Materials";
-import Mits from "../Home/Sections/Mits";
-import Routin from "../Home/Sections/Routin";
-import Gap from "../../screens/Home/Sections/Components/Gap";
+import Clean from "../../components/HomeSections/Clean";
+import Tonic from "../../components/HomeSections/Tonic";
+import Care from "../../components/HomeSections/Care";
+import Materials from "../../components/HomeSections/Materials";
+import Mits from "../../components/HomeSections/Mits";
+import Routin from "../../components/HomeSections/Routin";
+import Gap from "../../components/HomeSections/Gap";
 
 const Container = styled.ScrollView`
   background: #97ac9f;

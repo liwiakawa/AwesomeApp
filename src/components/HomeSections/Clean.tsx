@@ -6,7 +6,7 @@ import {
 } from "react-native-responsive-screen";
 import { MaterialIcons } from "react-native-vector-icons";
 
-import Colors from "../../../constans/Colors";
+import Colors from "../../constans/Colors";
 
 const Container = styled.View``;
 
@@ -113,7 +113,7 @@ const Clean: FC = () => {
       >
         <LeftArrowContainer />
         <Box>
-          <CustomImage source={require("../../../assets/1.png")} />
+          <CustomImage source={require("../../assets/1.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>
@@ -128,7 +128,7 @@ const Clean: FC = () => {
           <LeftArrow name="keyboard-arrow-left" />
         </LeftArrowContainer>
         <Box>
-          <CustomImage source={require("../../../assets/2.png")} />
+          <CustomImage source={require("../../assets/2.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>
@@ -143,7 +143,7 @@ const Clean: FC = () => {
           <LeftArrow name="keyboard-arrow-left" />
         </LeftArrowContainer>
         <Box>
-          <CustomImage source={require("../../../assets/3.png")} />
+          <CustomImage source={require("../../assets/3.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>

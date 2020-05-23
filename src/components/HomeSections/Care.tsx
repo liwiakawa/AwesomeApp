@@ -6,7 +6,7 @@ import {
 } from "react-native-responsive-screen";
 import { MaterialIcons } from "react-native-vector-icons";
 
-import Colors from "../../../constans/Colors";
+import Colors from "../../constans/Colors";
 
 const Container = styled.View``;
 
@@ -97,11 +97,11 @@ const BoxTxt = styled.Text`
   overflow: hidden;
 `;
 
-const Mits: FC = () => {
+const Care: FC = () => {
   return (
     <Container>
       <SectionTitleContainer>
-        <SectionTitle>Mity</SectionTitle>
+        <SectionTitle>Pielęgnacja</SectionTitle>
       </SectionTitleContainer>
       <SectionContainer
         horizontal={true}
@@ -110,7 +110,7 @@ const Mits: FC = () => {
       >
         <LeftArrowContainer />
         <Box>
-          <CustomImage source={require("../../../assets/16.png")} />
+          <CustomImage source={require("../../assets/7.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>
@@ -125,7 +125,7 @@ const Mits: FC = () => {
           <LeftArrow name="keyboard-arrow-left" />
         </LeftArrowContainer>
         <Box>
-          <CustomImage source={require("../../../assets/17.png")} />
+          <CustomImage source={require("../../assets/8.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>
@@ -140,7 +140,7 @@ const Mits: FC = () => {
           <LeftArrow name="keyboard-arrow-left" />
         </LeftArrowContainer>
         <Box>
-          <CustomImage source={require("../../../assets/18.png")} />
+          <CustomImage source={require("../../assets/9.png")} />
           <BoxTitle>Wstęp</BoxTitle>
           <Time>3-5 min czytania</Time>
           <BoxTxt>
@@ -154,4 +154,4 @@ const Mits: FC = () => {
   );
 };
 
-export default Mits;
+export default Care;
