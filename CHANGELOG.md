@@ -1,5 +1,18 @@
 # Change log
 
+## V. 0.1.4 - May 24. 2020
+
+**Deleted**
+-  Deleted useless sections components from HomeScreen
+
+**Changed**
+-  Constans colors
+-  Changed all images in HomeScreen
+-  Changed icon
+-  Changed unsplash
+-  Changed Form Screen 
+
+
 ## V. 0.1.3 - May 23. 2020
 
 **Added**
