@@ -4,80 +4,73 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { Octicons } from "react-native-vector-icons";
+import { StyleSheet, ScrollView, View} from "react-native";
 
 import Colors from "../../constans/Colors";
-import Clean from "../../components/HomeSections/Clean";
-import Tonic from "../../components/HomeSections/Tonic";
-import Care from "../../components/HomeSections/Care";
-import Materials from "../../components/HomeSections/Materials";
-import Mits from "../../components/HomeSections/Mits";
-import Routin from "../../components/HomeSections/Routin";
-import Gap from "../../components/HomeSections/Gap";
+import CreativeThink from "../../components/HomeSections/CreativeThink";
+import Stereotypes from "../../components/HomeSections/Stereotypes";
+import Minimal from "../../components/HomeSections/Minimal";
+import Creativity from "../../components/HomeSections/Creativity";
 
-const Container = styled.ScrollView`
-  background: #97ac9f;
-`;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+  },
+});
 
-const Background = styled.Image`
-  resize-mode: cover;
+const Image = styled.Image`
+  resize-mode: contain;
   position: absolute;
+  width: ${wp("100%")};
+  height: ${hp("100%")};
+  top: 0;
+  z-index: -1;
 `;
 
-const LightBulbContainer = styled.View`
-  background: ${Colors.secondary};
-  border-radius: ${hp("100%")};
-  width: ${wp("20%")};
-  height: ${wp("20%")};
+const Background = styled.View`
   position: absolute;
-  top: ${hp("20%")};
-  left: ${wp("40%")};
-  box-shadow: 10px 5px 5px grey;
+  background: #7ce3c6;
+   width: ${wp("100%")};
+  height: ${hp("200%")};
+  top: ${hp("65%")};
 `;
 
-const LightBulb = styled(Octicons)`
-  color: ${Colors.white};
-  font-size: ${hp("8%")};
-  top: ${hp("1.5%")};
-  text-align: center;
+const Stripe = styled.View`
+  position: absolute;
+  background: #5dc18d;
+  width: ${wp("86%")};
+  height: ${hp("200%")};
+  left: ${wp("7%")};
 `;
-
 const Title = styled.Text`
-  color: ${Colors.white};
+  top: ${hp("39%")};
+  height: ${hp("15%")};
+  width: ${wp("37.5%")};
+  right: ${wp("7%")};
+  color: ${Colors.primary}
   position: absolute;
-  top: ${hp("40%")};
-  font-size: ${hp("3%")};
-  text-align: center;
-  width: ${wp("84%")};
-  left: ${wp("8%")};
-  font-weight: bold;
+  font-size: ${hp("4%")};
+  text-align: right;
+  font-weight: 500;
 `;
 
 interface IHomeProps {}
 
 const Home: FC<IHomeProps> = (props) => {
   return (
-    <Container>
-      <Background source={require("../../assets/forest.png")} />
-      <LightBulbContainer>
-        <LightBulb name="light-bulb"></LightBulb>
-      </LightBulbContainer>
-      <Title>
-        Zostań specjalistą od pielęgnacji domowej. Jak dbać o skórę w tym
-        trudnym czasie?
-      </Title>
-      <Clean />
-      <Gap />
-      <Tonic />
-      <Gap />
-      <Care />
-      <Gap />
-      <Materials />
-      <Gap />
-      <Routin />
-      <Gap />
-      <Mits />
-    </Container>
+    <ScrollView style={styles.container}>
+      <Image source={require("../../assets/bg.jpg")} />
+   <Background>
+      <Stripe />
+      </Background>
+
+      <Title>Become {"\n"} a creativity expert.</Title>
+      <CreativeThink />
+      <Minimal />
+      <Creativity />
+      <Stereotypes />
+    </ScrollView>
   );
 };
 

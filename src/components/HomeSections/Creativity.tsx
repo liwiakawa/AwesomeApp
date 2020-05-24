@@ -4,28 +4,37 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import { View, StyleSheet } from "react-native";
 import { MaterialIcons } from "react-native-vector-icons";
 
 import Colors from "../../constans/Colors";
 
-const Container = styled.View``;
-
-const SectionTitleContainer = styled.View`
-  background: ${Colors.secondary};
-  width: ${wp("55%")};
-  height: ${hp("5%")};
-  border-top-right-radius: ${hp("3%")};
-  border-bottom-right-radius: ${hp("3%")};
-`;
+const styles = StyleSheet.create({
+  SectionTitleConatiner: {
+    backgroundColor: Colors.secondary,
+    width: wp("60%"),
+    height: hp("5%"),
+    borderTopRightRadius: hp("3%"),
+    borderBottomRightRadius: hp("3%"),
+    left: wp("5.5%"),
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 7.49,
+    elevation: 12,
+  },
+});
 
 const SectionTitle = styled.Text`
-  color: ${Colors.white};
+  color: ${Colors.primary};
   font-size: ${hp("4%")};
-  left: ${wp("2%")};
+  left: ${wp("3%")};
 `;
 
 const SectionContainer = styled.ScrollView`
-  background: #ffffff30;
   height: ${hp("39%")};
   width: ${wp("100%")};
 `;
@@ -39,38 +48,39 @@ const RightArrowContainer = styled.View`
   width: ${wp("8%")};
 `;
 const LeftArrow = styled(MaterialIcons)`
-  color: #00000060;
+color: ${Colors.primary};
   font-size: ${hp("5%")};
   top: 40%;
 `;
 const RightArrow = styled(MaterialIcons)`
-  color: #00000060;
+color: ${Colors.primary};
   font-size: ${hp("5%")};
   top: 40%;
 `;
 
 const Box = styled.View`
   background: ${Colors.secondary};
-  border-radius: ${hp("3%")};
+  border-top-left-radius: ${hp("7%")};
+  border-bottom-right-radius: ${hp("7%")};
   height: ${hp("33%")};
   width: ${wp("84%")};
   margin-left: 0;
   top: ${wp("5%")};
   margin-right: 0;
 `;
+
 const CustomImage = styled.Image`
-  height: ${hp("30%")};
-  width: ${wp("45%")};
+  height: ${hp("15%")};
+  width: ${wp("77%")};
   left: ${wp("3%")};
   top: ${hp("1.5%")};
-  border-top-left-radius: ${hp("3%")};
-  border-bottom-left-radius: ${hp("3%")};
+  border-radius: ${hp("7%")};
 `;
 
 const BoxTitle = styled.Text`
-  color: ${Colors.white};
-  right: ${wp("2%")};
-  top: ${hp("1.5%")};
+  color: ${Colors.primary};
+  left: ${wp("3%")};
+  top: ${hp("17%")};
   width: ${wp("32%")};
   position: absolute;
   overflow: hidden;
@@ -79,9 +89,9 @@ const BoxTitle = styled.Text`
 `;
 
 const Time = styled.Text`
-  color: ${Colors.white};
-  right: ${wp("2%")};
-  top: ${hp("6%")};
+  color: ${Colors.primary};
+  left: ${wp("3%")};
+  top: ${hp("21%")};
   width: ${wp("32%")};
   position: absolute;
   overflow: hidden;
@@ -89,20 +99,20 @@ const Time = styled.Text`
 `;
 
 const BoxTxt = styled.Text`
-  color: ${Colors.white};
-  right: ${wp("2%")};
-  top: ${hp("9%")};
-  width: ${wp("32%")};
+  color: ${Colors.primary};
+  left: ${wp("3%")};
+  top: ${hp("24%")};
+  width: ${wp("75%")};
   position: absolute;
   overflow: hidden;
 `;
 
-const Materials: FC = () => {
+const Creativity: FC = () => {
   return (
-    <Container>
-      <SectionTitleContainer>
-        <SectionTitle>Surowce</SectionTitle>
-      </SectionTitleContainer>
+    <View style={{ flex: 1 }}>
+       <View style={styles.SectionTitleConatiner}>
+        <SectionTitle>Creativity</SectionTitle>
+      </View>
       <SectionContainer
         horizontal={true}
         pagingEnabled={true}
@@ -110,12 +120,12 @@ const Materials: FC = () => {
       >
         <LeftArrowContainer />
         <Box>
-          <CustomImage source={require("../../assets/10.png")} />
-          <BoxTitle>Wstęp</BoxTitle>
-          <Time>3-5 min czytania</Time>
+          <CustomImage source={require("../../assets/10.jpg")} />
+          <BoxTitle>Introduction</BoxTitle>
+          <Time>3-5 min read</Time>
           <BoxTxt>
-            Wcho­dzisz do dro­ge­rii, wi­dzisz pół­ki ugi­na­ją­ce się od mydeł,
-            żeli, toników. Czym się kierować?
+            The truth is that every single individual can be creative. You
+            simply require the right environment, stimulus, and support.
           </BoxTxt>
         </Box>
         <RightArrowContainer>
@@ -125,12 +135,12 @@ const Materials: FC = () => {
           <LeftArrow name="keyboard-arrow-left" />
         </LeftArrowContainer>
         <Box>
-          <CustomImage source={require("../../assets/11.png")} />
-          <BoxTitle>Wstęp</BoxTitle>
-          <Time>3-5 min czytania</Time>
+          <CustomImage source={require("../../assets/11.jpg")} />
+          <BoxTitle>Introduction</BoxTitle>
+          <Time>3-5 min read</Time>
           <BoxTxt>
-            Wcho­dzisz do dro­ge­rii, wi­dzisz pół­ki ugi­na­ją­ce się od mydeł,
-            żeli, toników. Czym się kierować?
+            The truth is that every single individual can be creative. You
+            simply require the right environment, stimulus, and support.
           </BoxTxt>
         </Box>
         <RightArrowContainer>
@@ -140,18 +150,18 @@ const Materials: FC = () => {
           <LeftArrow name="keyboard-arrow-left" />
         </LeftArrowContainer>
         <Box>
-          <CustomImage source={require("../../assets/12.png")} />
-          <BoxTitle>Wstęp</BoxTitle>
-          <Time>3-5 min czytania</Time>
+          <CustomImage source={require("../../assets/12.jpg")} />
+          <BoxTitle>Introduction</BoxTitle>
+          <Time>3-5 min read</Time>
           <BoxTxt>
-            Wcho­dzisz do dro­ge­rii, wi­dzisz pół­ki ugi­na­ją­ce się od mydeł,
-            żeli, toników. Czym się kierować?
+            The truth is that every single individual can be creative. You
+            simply require the right environment, stimulus, and support.
           </BoxTxt>
         </Box>
         <RightArrowContainer></RightArrowContainer>
       </SectionContainer>
-    </Container>
+    </View>
   );
 };
 
-export default Materials;
+export default Creativity;

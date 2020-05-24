@@ -5,7 +5,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { MaterialCommunityIcons } from "react-native-vector-icons";
+import { MaterialCommunityIcons, FontAwesome5 } from "react-native-vector-icons";
 
 import { IState } from "../../reducers";
 import { ItodoListReducer } from "../../reducers/todoListReducer";
@@ -27,18 +27,10 @@ const styles = StyleSheet.create({
     borderColor: Colors.primary,
     borderRadius: 400 / 2,
     borderWidth: wp("0.25%"),
-    shadowColor: Colors.black,
-    shadowOffset: {
-      width: 0,
-      height: 6,
-    },
-    shadowOpacity: 0.39,
-    shadowRadius: 8.3,
-    elevation: 13,
   },
   AddBtnIcon: {
-    top: wp("1%"),
-    fontSize: wp("12%"),
+    top: wp("2.5%"),
+    fontSize: wp("9%"),
     textAlign: "center",
     color: Colors.primary,
   },
@@ -48,7 +40,7 @@ const styles = StyleSheet.create({
     marginTop: hp("3%"),
     left: hp("2.5%"),
     textAlign: "center",
-    backgroundColor: "#b1b8b050",
+    backgroundColor: Colors.secondary,
   },
   Titletxt: {
     fontSize: hp("4%"),
@@ -63,14 +55,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: hp("3%"),
     borderBottomRightRadius: hp("3%"),
     marginTop: hp("5%"),
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 6,
-    },
-    shadowOpacity: 0.39,
-    shadowRadius: 8.3,
-    elevation: 20,
   },
   Descriptiontxt: {
     fontSize: hp("2.5%"),
@@ -103,8 +87,8 @@ const TodoList: FC<{ switchView(formView: boolean) }> = (props) => {
         ))}
       </ScrollView>
       <View style={styles.AddBtnBox}>
-        <MaterialCommunityIcons
-          name="leaf"
+        <FontAwesome5
+          name="pencil-alt"
           style={styles.AddBtnIcon}
           onPress={goToForm}
         />

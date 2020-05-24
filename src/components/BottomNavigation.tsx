@@ -3,6 +3,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
   MaterialCommunityIcons,
   Octicons,
+  FontAwesome,
+  FontAwesome5
 } from "react-native-vector-icons";
 
 import Home from "../screens/Home";
@@ -33,7 +35,7 @@ const BottomTabs: FC = () => {
         component={Home}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Octicons name="light-bulb" color={color} size={size} />
+            <FontAwesome name="lightbulb-o" color={color} size={size} />
           ),
         }}
       />
@@ -42,7 +44,7 @@ const BottomTabs: FC = () => {
         component={TodoList}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="leaf" color={color} size={size} />
+            <FontAwesome5 name="pencil-alt" color={color} size={size} />
           ),
         }}
       />
