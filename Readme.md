@@ -1,11 +1,19 @@
-# ToDo Mobile App
+# AwesomeApp
+> Whatever you do, do it well... in AwesomeApp!
+
+## Table of contents
+* [Demo](#demo)
+* [Folders Structur](#folders-structur)
+* [Usage](#usage)
+* [Status](#status)
+* [Contact](#contact)
 
 ## Demo
 ![AwesomeApp - Animated gif demo](demo/home.gif)
 ![AwesomeApp - Animated gif demo](demo/todo.gif)
 ![AwesomeApp - Animated gif demo](demo/account.gif)
 
-## **Folders Structure**
+## Folders Structure
 
 - **actions** (actions for redux)
 - **assets** (img, fonts etc.)
@@ -22,7 +30,7 @@
     - **[Home]** 
 - **tools** (reuseable tools)
 
-## **Usage**
+## Usage
 
 1. Download and install expo app on your phone
     - Android: https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pl
@@ -46,3 +54,9 @@
 7. Building apk/ipa
     - expo build:android / expo build:ios (https://docs.expo.io/versions/latest/distribution/building-standalone-apps)
     - you can see progress: https://expo.io/builds
+    
+## Status
+Project is:  _finished_
+
+## Contact
+Created by [@tchibo] - feel free to contact me!
