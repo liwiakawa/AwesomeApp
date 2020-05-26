@@ -1,5 +1,10 @@
 # ToDo Mobile App
 
+## Demo
+![AwesomeApp - Animated gif demo](demo/home.gif)
+![AwesomeApp - Animated gif demo](demo/todo.gif)
+![AwesomeApp - Animated gif demo](demo/account.gif)
+
 ## **Folders Structure**
 
 - **actions** (actions for redux)
