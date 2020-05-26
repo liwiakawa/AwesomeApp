@@ -4,13 +4,14 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { StyleSheet, ScrollView, View} from "react-native";
+import { StyleSheet, ScrollView} from "react-native";
 
 import Colors from "../../constans/Colors";
-import CreativeThink from "../../components/HomeSections/CreativeThink";
-import Stereotypes from "../../components/HomeSections/Stereotypes";
-import Minimal from "../../components/HomeSections/Minimal";
-import Creativity from "../../components/HomeSections/Creativity";
+import CreativeThink from "../../components/HomeComponents/CreativeThink";
+import Stereotypes from "../../components/HomeComponents/Stereotypes";
+import Minimal from "../../components/HomeComponents/Minimal";
+import Creativity from "../../components/HomeComponents/Creativity";
+
 
 const styles = StyleSheet.create({
   container: {
@@ -31,20 +32,20 @@ const Image = styled.Image`
 const Background = styled.View`
   position: absolute;
   background: #7ce3c6;
-   width: ${wp("100%")};
+  width: ${wp("100%")};
   height: ${hp("200%")};
   top: ${hp("65%")};
 `;
 
 const Stripe = styled.View`
   position: absolute;
-  background: #5dc18d;
+  background: ${Colors.darkgreen};
   width: ${wp("86%")};
   height: ${hp("200%")};
   left: ${wp("7%")};
 `;
 const Title = styled.Text`
-  top: ${hp("39%")};
+  top: ${hp("38.75%")};
   height: ${hp("15%")};
   width: ${wp("37.5%")};
   right: ${wp("7%")};
@@ -61,10 +62,9 @@ const Home: FC<IHomeProps> = (props) => {
   return (
     <ScrollView style={styles.container}>
       <Image source={require("../../assets/bg.jpg")} />
-   <Background>
-      <Stripe />
+      <Background>
+        <Stripe />
       </Background>
-
       <Title>Become {"\n"} a creativity expert.</Title>
       <CreativeThink />
       <Minimal />

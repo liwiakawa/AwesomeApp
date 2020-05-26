@@ -6,3 +6,8 @@ export const setNewTasktodoList = (newTask: ITask) => ({
   newTask,
 });
 
+export const deleteTasktodoList = (id) => ({
+  type: actiontypes.DEL_TASK,
+  id
+})
+

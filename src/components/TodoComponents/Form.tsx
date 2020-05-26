@@ -1,23 +1,23 @@
 import React, { FC, useState } from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import styled from "styled-components/native";
+import { MaterialIcons } from "react-native-vector-icons";
 
-import { IState } from "../../reducers";
-import { ItodoListReducer } from "../../reducers/todoListReducer";
 import { setNewTasktodoList } from "../../actions/todoListActions";
 import { ITask } from "../../entities/task";
 import Colors from "../../constans/Colors";
 
 const Header = styled.Image`
-resize-mode: stretch;
-height: ${hp("15%")};
-width: ${wp("100%")};
-`
+  resize-mode: stretch;
+  height: ${hp("15%")};
+  width: ${wp("100%")};
+`;
+
 const HeaderTxt = styled.Text`
   position: absolute;
   top: ${hp("4%")};
@@ -28,44 +28,30 @@ const HeaderTxt = styled.Text`
   text-align: center;
 `;
 
-const Title = styled.Text`
-color: ${Colors.primary};
-text-align: left;
-margin-top: ${hp("7%")};
-height: ${hp("6%")};
-width: ${wp("90%")};
-left: ${hp("2.5%")};
-font-size: ${hp("3.5%")};
-`;
-
 const TitleInput = styled.TextInput`
-background: ${Colors.tertiary};
+  background: ${Colors.secondary};
   text-align: center;
-  margin-top: ${hp("3%")};
+  margin-top: ${hp("4%")};
   height: ${hp("6%")};
   width: ${wp("90%")};
   left: ${hp("2.5%")};
   font-size: ${hp("2.5%")};
-  border-top-left-radius: ${hp("7%")};
-  border-bottom-right-radius: ${hp("7%")};
 `;
 
 const DescriptionInput = styled.TextInput`
-background: ${Colors.tertiary};
+  background: ${Colors.secondary};
   text-align: center;
-  margin-top: ${hp("3%")};
+  margin-top: ${hp("4%")};
   height: ${hp("20%")};
   width: ${wp("90%")};
   left: ${hp("2.5%")};
   font-size: ${hp("2.5%")};
-  border-top-left-radius: ${hp("7%")};
-  border-bottom-right-radius: ${hp("7%")};
 `;
 
 const AddButton = styled.TouchableOpacity`
   background: ${Colors.primary};
   text-align: center;
-  margin-top: ${hp("7%")};
+  margin-top: ${hp("8%")};
   height: ${hp("6%")};
   width: ${wp("90%")};
   left: ${hp("2.5%")};
@@ -77,10 +63,39 @@ const TxtAddBtn = styled.Text`
   margin-top: ${hp("1.5%")};
   color: ${Colors.white};
 `;
+
+const BackButton = styled(MaterialIcons)`
+  font-size: ${wp("10%")};
+  color: ${Colors.primary};
+  bottom: ${hp("2.5%")};
+  position: absolute;
+`;
+
 const styles = StyleSheet.create({
   Container: {
     flex: 1,
     backgroundColor: Colors.white,
+  },
+  Titlebox: {
+    backgroundColor: Colors.darkgreen,
+    height: hp("5.5%"),
+    width: wp("50%"),
+    borderTopRightRadius: hp("3%"),
+    borderBottomRightRadius: hp("3%"),
+    marginTop: hp("3%"),
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 7.49,
+    elevation: 12,
+  },
+  TitleTxt: {
+    color: Colors.white,
+    fontSize: hp("4%"),
+    marginLeft: hp("2.5%"),
   },
 });
 
@@ -100,41 +115,52 @@ const Form: FC<{ switchView(formView: boolean) }> = (props) => {
   };
 
   const saveData = () => {
-    dispatch<SetNewTasktodoList>(
-      setNewTasktodoList({
-        id: Date.now(),
-        name: nameInput,
-        description: descInput,
-      } as ITask)
-    );
+    if (nameInput === "" || descInput === "") {
+      console.log("Please fill in all fields");
+    } else {
+      dispatch<SetNewTasktodoList>(
+        setNewTasktodoList({
+          id: Date.now(),
+          name: nameInput,
+          description: descInput,
+        } as ITask)
+      );
+      props.switchView(false);
+    }
+  };
+
+  const BackToForm = () => {
     props.switchView(false);
   };
 
   return (
     <View style={styles.Container}>
-      <Header source={require("../../assets/wave.jpg")} ></Header>
+      <Header source={require("../../assets/wave.jpg")}></Header>
       <HeaderTxt>Let's make something awesome</HeaderTxt>
-      <Title>Title</Title>
-  
+      <View style={styles.Titlebox}>
+        <Text style={styles.TitleTxt}>Title </Text>
+      </View>
       <TitleInput
         value={nameInput}
         onChange={nameValueChange}
-        placeholder="Title"
         placeholderTextColor={Colors.primary}
         maxLength={20}
       />
-      <Title>Description</Title>
+      <View style={styles.Titlebox}>
+        <Text style={styles.TitleTxt}>Description </Text>
+      </View>
       <DescriptionInput
         value={descInput}
         onChange={descriptionValueChange}
-        placeholder="Description"
         placeholderTextColor={Colors.primary}
         multiline={true}
         blurOnSubmit={true}
+        keyboardAppearance={"light"}
       />
       <AddButton onPress={saveData}>
         <TxtAddBtn>Let's go!</TxtAddBtn>
       </AddButton>
+      <BackButton name="keyboard-arrow-left" onPress={BackToForm}></BackButton>
     </View>
   );
 };

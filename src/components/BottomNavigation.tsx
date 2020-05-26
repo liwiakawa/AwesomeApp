@@ -2,14 +2,13 @@ import React, { FC } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
   MaterialCommunityIcons,
-  Octicons,
   FontAwesome,
-  FontAwesome5
+  FontAwesome5,
 } from "react-native-vector-icons";
 
 import Home from "../screens/Home";
 import TodoList from "../screens/TodoList";
-import Account from"../screens/Account";
+import Account from "../screens/Account";
 import Colors from "../constans/Colors";
 
 const Tab = createBottomTabNavigator();
@@ -48,7 +47,7 @@ const BottomTabs: FC = () => {
           ),
         }}
       />
-            <Tab.Screen
+      <Tab.Screen
         name="Account"
         component={Account}
         options={{
