@@ -6,7 +6,6 @@
 * [Folders Structur](#folders-structur)
 * [Usage](#usage)
 * [Status](#status)
-* [Contact](#contact)
 
 ## Demo
 ![AwesomeApp - Animated gif demo](demo/home.gif)
@@ -58,5 +57,3 @@
 ## Status
 Project is:  _finished_
 
-## Contact
-Created by [@tchibo] - feel free to contact me!
