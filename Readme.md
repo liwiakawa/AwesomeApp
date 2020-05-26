@@ -3,7 +3,7 @@
 
 ## Table of contents
 * [Demo](#demo)
-* [Folders Structur](#folders-structur)
+* [Folders Structur](#folders-structure)
 * [Usage](#usage)
 * [Status](#status)
 
